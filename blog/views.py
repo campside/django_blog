@@ -33,7 +33,7 @@ def index(request):
         'fresh_posts': [serialize_post(post) for post in fresh_posts],
     }
 
-    print(context)
+    print(context['fresh_posts'][0].keys())
     return render(request, 'index.html', context)
 
 
